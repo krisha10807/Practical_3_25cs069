@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 3 - Flexbox UI Layout | StudentHub</title>
+    <link rel="stylesheet" href="flex_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Flexbox Navigation Header -->
+    <header class="flex-header">
+        <div class="brand-logo">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <h2>StudentHub Portal</h2>
+        </div>
+
+        <ul class="flex-nav-links">
+            <li><a href="#" class="active"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="#"><i class="fa-solid fa-book"></i> Courses</a></li>
+            <li><a href="#"><i class="fa-solid fa-chart-pie"></i> Performance</a></li>
+            <li><a href="#"><i class="fa-solid fa-building-columns"></i> Campus</a></li>
+            <li><a href="#"><i class="fa-solid fa-headset"></i> Support</a></li>
+        </ul>
+
+        <div class="user-action-btn">
+            <button class="btn-profile"><i class="fa-solid fa-user"></i> Krisha Patel</button>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="main-wrapper">
+
+        <!-- Student Profile Hero Section (Flexbox Layout) -->
+        <section class="profile-hero">
+            <div class="profile-detail">
+                <div class="avatar">
+                    <i class="fa-solid fa-user-graduate"></i>
+                </div>
+                <div class="profile-text">
+                    <h2>Krisha Patel <span style="font-size:0.85rem; background:#e0f2fe; color:#0369a1; padding:0.2rem 0.6rem; border-radius:12px; font-weight:600;">Student ID: 24CS066</span></h2>
+                    <p><i class="fa-solid fa-building"></i> CSPIT - Computer Engineering | Semester 4</p>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button class="btn-action primary"><i class="fa-solid fa-download"></i> Download Admit Card</button>
+                <button class="btn-action"><i class="fa-solid fa-gear"></i> Account Settings</button>
+            </div>
+        </section>
+
+        <!-- Flexbox Cards Row (Responsive basis and grow) -->
+        <h3 style="font-weight: 600; font-size:1.2rem; margin-bottom: -0.5rem;"><i class="fa-solid fa-layer-group"></i> Quick Overview (Flex Wrap & Grow)</h3>
+
+        <section class="flex-cards-row">
+            
+            <div class="flex-card">
+                <div>
+                    <div class="flex-card-header">
+                        <h4>Attendance Status</h4>
+                        <span class="badge badge-success">Good</span>
+                    </div>
+                    <div class="flex-card-body">
+                        <p>Your current aggregate attendance across 6 courses is <strong>92.5%</strong>.</p>
+                    </div>
+                </div>
+                <div class="flex-card-footer">
+                    <span>Target: 85%</span>
+                    <a href="#" style="color:var(--primary); font-weight:600; text-decoration:none;">Details &rarr;</a>
+                </div>
+            </div>
+
+            <div class="flex-card">
+                <div>
+                    <div class="flex-card-header">
+                        <h4>Mid-Sem Results</h4>
+                        <span class="badge badge-success">Published</span>
+                    </div>
+                    <div class="flex-card-body">
+                        <p>Results for Spring 2026 mid-semester examinations have been released.</p>
+                    </div>
+                </div>
+                <div class="flex-card-footer">
+                    <span>GPA: 9.45</span>
+                    <a href="#" style="color:var(--primary); font-weight:600; text-decoration:none;">View Marksheet &rarr;</a>
+                </div>
+            </div>
+
+            <div class="flex-card">
+                <div>
+                    <div class="flex-card-header">
+                        <h4>Library Due</h4>
+                        <span class="badge badge-warning">2 Days Left</span>
+                    </div>
+                    <div class="flex-card-body">
+                        <p>Book "Clean Code by Robert C. Martin" is due on 21 Sep 2026.</p>
+                    </div>
+                </div>
+                <div class="flex-card-footer">
+                    <span>Fine: ₹0</span>
+                    <a href="#" style="color:var(--primary); font-weight:600; text-decoration:none;">Renew Book &rarr;</a>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Flexbox Footer -->
+    <footer class="flex-footer">
+        <div>
+            <p>&copy; 2026 StudentHub Portal | Practical Task 2: Flexbox Navigation & Responsive UI</p>
+        </div>
+        <div style="display:flex; gap:1rem;">
+            <a href="#" style="color:#94a3b8; text-decoration:none;">Privacy Policy</a>
+            <a href="#" style="color:#94a3b8; text-decoration:none;">Terms of Service</a>
+            <a href="#" style="color:#94a3b8; text-decoration:none;">Help Desk</a>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 3 - CSS Grid Student Dashboard | StudentHub</title>
+    <link rel="stylesheet" href="grid_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header Banner -->
+    <div class="banner">
+        <h1>StudentHub Portal - Responsive CSS Grid Layout</h1>
+        <p>Practical Task 1: Responsive Web Page using CSS Grid (Template Areas & Auto-fit)</p>
+    </div>
+
+    <!-- App Layout Container using CSS Grid -->
+    <div class="app-layout">
+
+        <!-- Header -->
+        <header class="grid-header">
+            <div class="logo">
+                <h2><i class="fa-solid fa-graduation-cap"></i> StudentHub</h2>
+            </div>
+            <div class="user-profile">
+                <span>Welcome, <strong>Krisha Patel (24CS066)</strong></span>
+            </div>
+        </header>
+
+        <!-- Sidebar -->
+        <aside class="grid-sidebar">
+            <ul>
+                <li><a href="#" class="active"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
+                <li><a href="#"><i class="fa-solid fa-book-open"></i> Courses</a></li>
+                <li><a href="#"><i class="fa-solid fa-calendar-days"></i> Timetable</a></li>
+                <li><a href="#"><i class="fa-solid fa-user-check"></i> Attendance</a></li>
+                <li><a href="#"><i class="fa-solid fa-graduation-cap"></i> Results</a></li>
+                <li><a href="#"><i class="fa-solid fa-credit-card"></i> Fees</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="grid-main">
+
+            <!-- Stats Grid Section (auto-fit minmax) -->
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-solid fa-book-bookmark"></i></div>
+                    <div class="stat-info">
+                        <h3>6</h3>
+                        <p>Enrolled Courses</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-solid fa-clipboard-user"></i></div>
+                    <div class="stat-info">
+                        <h3>92%</h3>
+                        <p>Overall Attendance</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-solid fa-award"></i></div>
+                    <div class="stat-info">
+                        <h3>9.45</h3>
+                        <p>Current CGPA</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-solid fa-bell"></i></div>
+                    <div class="stat-info">
+                        <h3>3</h3>
+                        <p>Pending Notices</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Complex Dashboard Grid -->
+            <section class="dashboard-grid">
+
+                <!-- Enrolled Courses Card -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title"><i class="fa-solid fa-laptop-code"></i> Active Courses (CSS Sub-Grid)</h3>
+                        <a href="#" style="font-size:0.85rem; color:var(--primary); text-decoration:none;">View All</a>
+                    </div>
+                    <div class="courses-subgrid">
+                        <div class="course-item">
+                            <h4>Web Development (WDF)</h4>
+                            <p>Prof. Patel • Room 302</p>
+                        </div>
+                        <div class="course-item">
+                            <h4>Data Structures & Algo</h4>
+                            <p>Prof. Shah • Lab 104</p>
+                        </div>
+                        <div class="course-item">
+                            <h4>Database Systems</h4>
+                            <p>Prof. Sharma • Lab 201</p>
+                        </div>
+                        <div class="course-item">
+                            <h4>Computer Networks</h4>
+                            <p>Prof. Mehta • Room 401</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Upcoming Lectures Card -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title"><i class="fa-solid fa-clock"></i> Today's Schedule</h3>
+                    </div>
+                    <div class="schedule-list">
+                        <div class="schedule-item">
+                            <span class="time-badge">09:00 AM</span>
+                            <div>
+                                <h4 style="font-size:0.9rem;">WDF Practical</h4>
+                                <p style="font-size:0.75rem; color:var(--text-muted);">Lab 305 (CSS Grid)</p>
+                            </div>
+                        </div>
+                        <div class="schedule-item">
+                            <span class="time-badge">11:15 AM</span>
+                            <div>
+                                <h4 style="font-size:0.9rem;">DSA Lecture</h4>
+                                <p style="font-size:0.75rem; color:var(--text-muted);">Audi-2</p>
+                            </div>
+                        </div>
+                        <div class="schedule-item">
+                            <span class="time-badge">02:00 PM</span>
+                            <div>
+                                <h4 style="font-size:0.9rem;">DBMS Lab</h4>
+                                <p style="font-size:0.75rem; color:var(--text-muted);">Lab 102</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="grid-footer">
+            <p>&copy; 2026 StudentHub Portal | Practical 3: CSS Grid Layout Demonstration</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

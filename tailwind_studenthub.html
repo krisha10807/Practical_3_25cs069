@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 3 - Tailwind CSS Responsive UI | StudentHub</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans min-h-screen flex flex-col">
+
+    <!-- Top Announcement Banner -->
+    <div class="bg-gradient-to-r from-blue-700 via-indigo-700 to-purple-700 text-white py-2 px-4 text-center text-sm font-medium shadow-md">
+        <i class="fa-solid fa-sparkles mr-2"></i> Practical 3: Responsive UI Design using Tailwind CSS Framework
+    </div>
+
+    <!-- Responsive Navbar (Flexbox & Responsive Utilities) -->
+    <nav class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="bg-brand-600 text-white p-2.5 rounded-xl shadow-md">
+                        <i class="fa-solid fa-graduation-cap text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl font-bold bg-gradient-to-r from-brand-600 to-indigo-600 bg-clip-text text-transparent">StudentHub</span>
+                        <span class="text-xs block text-slate-500 font-medium">CSPIT Campus Portal</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation Links -->
+                <div class="hidden md:flex space-x-1 lg:space-x-4">
+                    <a href="#" class="bg-brand-50 text-brand-600 px-3 py-2 rounded-lg font-semibold text-sm flex items-center space-x-2">
+                        <i class="fa-solid fa-chart-pie"></i><span>Dashboard</span>
+                    </a>
+                    <a href="#" class="text-slate-600 hover:text-brand-600 hover:bg-slate-100 px-3 py-2 rounded-lg font-medium text-sm transition flex items-center space-x-2">
+                        <i class="fa-solid fa-book"></i><span>Courses</span>
+                    </a>
+                    <a href="#" class="text-slate-600 hover:text-brand-600 hover:bg-slate-100 px-3 py-2 rounded-lg font-medium text-sm transition flex items-center space-x-2">
+                        <i class="fa-solid fa-calendar-alt"></i><span>Schedule</span>
+                    </a>
+                    <a href="#" class="text-slate-600 hover:text-brand-600 hover:bg-slate-100 px-3 py-2 rounded-lg font-medium text-sm transition flex items-center space-x-2">
+                        <i class="fa-solid fa-user-check"></i><span>Attendance</span>
+                    </a>
+                    <a href="#" class="text-slate-600 hover:text-brand-600 hover:bg-slate-100 px-3 py-2 rounded-lg font-medium text-sm transition flex items-center space-x-2">
+                        <i class="fa-solid fa-wallet"></i><span>Fees</span>
+                    </a>
+                </div>
+
+                <!-- User Profile & Action -->
+                <div class="flex items-center space-x-3">
+                    <button class="bg-brand-600 hover:bg-brand-700 text-white px-4 py-2 rounded-lg text-sm font-semibold shadow-sm transition flex items-center space-x-2">
+                        <i class="fa-solid fa-user-circle"></i>
+                        <span class="hidden sm:inline">Krisha Patel</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+        
+        <!-- Welcome Hero Banner (Tailwind Flex & Gradient) -->
+        <div class="bg-gradient-to-r from-brand-600 to-indigo-800 text-white rounded-2xl p-6 sm:p-8 shadow-xl mb-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+            <div>
+                <span class="bg-white/20 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">Academic Year 2026</span>
+                <h1 class="text-2xl sm:text-3xl font-extrabold mt-2">Welcome Back, Krisha! 👋</h1>
+                <p class="text-brand-100 text-sm sm:text-base mt-1">Computer Engineering (24CS066) • CSPIT CHARUSAT</p>
+            </div>
+            <div class="flex gap-3">
+                <button class="bg-white text-brand-700 hover:bg-brand-50 font-bold px-4 py-2.5 rounded-xl shadow text-sm transition flex items-center space-x-2">
+                    <i class="fa-solid fa-qrcode"></i><span>Student ID QR</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Stats Grid (Tailwind Responsive Grid: 1 col mobile, 2 tablet, 4 desktop) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            
+            <div class="bg-white rounded-xl p-5 border border-slate-200 shadow-sm flex items-center space-x-4">
+                <div class="w-12 h-12 bg-blue-100 text-brand-600 rounded-xl flex items-center justify-center text-xl">
+                    <i class="fa-solid fa-book-open"></i>
+                </div>
+                <div>
+                    <p class="text-xs font-medium text-slate-500 uppercase tracking-wider">Enrolled Subjects</p>
+                    <h3 class="text-2xl font-extrabold text-slate-800">6 Courses</h3>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl p-5 border border-slate-200 shadow-sm flex items-center space-x-4">
+                <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center text-xl">
+                    <i class="fa-solid fa-user-check"></i>
+                </div>
+                <div>
+                    <p class="text-xs font-medium text-slate-500 uppercase tracking-wider">Overall Attendance</p>
+                    <h3 class="text-2xl font-extrabold text-slate-800">92.4%</h3>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl p-5 border border-slate-200 shadow-sm flex items-center space-x-4">
+                <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center text-xl">
+                    <i class="fa-solid fa-trophy"></i>
+                </div>
+                <div>
+                    <p class="text-xs font-medium text-slate-500 uppercase tracking-wider">Current SPI / CGPA</p>
+                    <h3 class="text-2xl font-extrabold text-slate-800">9.45</h3>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl p-5 border border-slate-200 shadow-sm flex items-center space-x-4">
+                <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center text-xl">
+                    <i class="fa-solid fa-receipt"></i>
+                </div>
+                <div>
+                    <p class="text-xs font-medium text-slate-500 uppercase tracking-wider">Semester Fee</p>
+                    <h3 class="text-2xl font-extrabold text-emerald-600">Paid ✓</h3>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Main Responsive Grid Section (2 cols desktop, 1 col mobile) -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <!-- Left 2-Column Section: Courses & Attendance -->
+            <div class="lg:col-span-2 space-y-6">
+                
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 class="text-lg font-bold text-slate-800 flex items-center space-x-2">
+                            <i class="fa-solid fa-laptop-code text-brand-600"></i>
+                            <span>Course Overview & Attendance</span>
+                        </h2>
+                        <span class="text-xs bg-slate-100 text-slate-600 font-semibold px-2.5 py-1 rounded-full">6 Active</span>
+                    </div>
+
+                    <!-- Responsive Table -->
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left text-sm border-collapse">
+                            <thead>
+                                <tr class="bg-slate-50 border-b border-slate-200 text-slate-500 uppercase text-xs font-semibold">
+                                    <th class="p-3">Course Code</th>
+                                    <th class="p-3">Course Name</th>
+                                    <th class="p-3">Faculty</th>
+                                    <th class="p-3">Attendance</th>
+                                    <th class="p-3">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-100">
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 font-semibold text-brand-600">CE241</td>
+                                    <td class="p-3 font-medium text-slate-900">Web Development Frameworks</td>
+                                    <td class="p-3 text-slate-500">Prof. Patel</td>
+                                    <td class="p-3"><span class="font-bold text-emerald-600">95%</span></td>
+                                    <td class="p-3"><span class="bg-emerald-100 text-emerald-700 text-xs px-2 py-1 rounded-md font-semibold">Regular</span></td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 font-semibold text-brand-600">CE242</td>
+                                    <td class="p-3 font-medium text-slate-900">Data Structures & Algorithms</td>
+                                    <td class="p-3 text-slate-500">Prof. Shah</td>
+                                    <td class="p-3"><span class="font-bold text-emerald-600">90%</span></td>
+                                    <td class="p-3"><span class="bg-emerald-100 text-emerald-700 text-xs px-2 py-1 rounded-md font-semibold">Regular</span></td>
+                                </tr>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 font-semibold text-brand-600">CE243</td>
+                                    <td class="p-3 font-medium text-slate-900">Database Management Systems</td>
+                                    <td class="p-3 text-slate-500">Prof. Sharma</td>
+                                    <td class="p-3"><span class="font-bold text-emerald-600">92%</span></td>
+                                    <td class="p-3"><span class="bg-emerald-100 text-emerald-700 text-xs px-2 py-1 rounded-md font-semibold">Regular</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right 1-Column Section: Announcements & Quick Links -->
+            <div class="space-y-6">
+                
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
+                    <h2 class="text-lg font-bold text-slate-800 mb-4 flex items-center space-x-2">
+                        <i class="fa-solid fa-bullhorn text-amber-500"></i>
+                        <span>Latest Announcements</span>
+                    </h2>
+                    
+                    <div class="space-y-4">
+                        <div class="p-3.5 bg-amber-50 border-l-4 border-amber-500 rounded-r-xl">
+                            <span class="text-xs font-semibold text-amber-700 block">Practical Submission Deadline</span>
+                            <p class="text-xs text-amber-900 mt-0.5">Practical 3 (CSS Grid, Flexbox & Tailwind) submission open on MS Teams.</p>
+                        </div>
+                        <div class="p-3.5 bg-blue-50 border-l-4 border-blue-500 rounded-r-xl">
+                            <span class="text-xs font-semibold text-blue-700 block">Mid-Sem Exam Timetable</span>
+                            <p class="text-xs text-blue-900 mt-0.5">Check your exam schedule for upcoming mid-semester exams.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Tailwind Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-6 border-t border-slate-800 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 text-center text-sm">
+            <p>&copy; 2026 StudentHub Portal | Practical Task 3: Responsive UI built using Tailwind CSS CDN</p>
+        </div>
+    </footer>
+
+</body>
+</html>
